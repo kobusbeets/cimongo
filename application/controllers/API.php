@@ -135,7 +135,10 @@ class API extends API_Controller {
     }
 
     public function delete($collection_name = '', $_id = '') {
-        $this->mdb->delete($collection_name, $_id);
+        $this->response = $this->mdb->delete($collection_name, $_id);
+        
+//        $data = $this->input->stream();
+//        $this->response = $data;
         
 //        $data = $this->input->stream();
 //
